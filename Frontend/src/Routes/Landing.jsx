@@ -17,6 +17,16 @@ const Landing = () => {
             Draws with the precision <br /> of a{' '}
             <span className="text-red-400 font-bold">Sharingan</span>. ⚡
           </p>
+
+          {/* Instagram Button */}
+          <a
+            href="https://www.instagram.com/official_anime_art_sales/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block mt-8 px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg text-white font-semibold transition-colors duration-300"
+          >
+            Order Now
+          </a>
         </div>
 
         {/* Right Image Section */}
