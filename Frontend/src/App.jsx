@@ -1,9 +1,15 @@
 import React from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Landing from './Routes/Landing'
+import NavBar from './Components/NavBar'
 function App() {
   return (
-    <>
-      <h1 className=" text-center">Hello World</h1>
-    </>
+    <Router>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Landing />}></Route>
+      </Routes>
+    </Router>
   )
 }
 
