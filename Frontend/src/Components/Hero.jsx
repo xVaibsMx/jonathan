@@ -9,8 +9,9 @@ const Hero = () => {
       <div className="flex flex-col md:flex-row justify-center items-center gap-16 px-6">
         {/* Left Text Section */}
         <div className="text-center md:text-left">
-          <h1 className="text-5xl md:text-6xl font-extrabold text-purple-400 ">
-            Jonathan Sam <br /> Wilbur
+          <h1 className="text-4xl md:text-6xl font-bold text-purple-600  font-mono">
+            Jonathan <br />
+            Sam Wilbur
           </h1>
           <h2 className="text-2xl mt-3 text-blue-300 font-semibold tracking-wide">
             Freelance <span className="text-pink-400">Anime Artist</span>
