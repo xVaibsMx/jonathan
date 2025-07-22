@@ -25,15 +25,15 @@ const ArtWorks = () => {
       {/* Swiper Slider */}
       <Swiper
         modules={[Navigation, Autoplay, Pagination]}
-        spaceBetween={30}
+        spaceBetween={40}
         pagination={{ clickable: true }}
         navigation
-        autoplay={{ delay: 2500, disableOnInteraction: false }}
+        autoplay={{ delay: 3000, disableOnInteraction: false }}
         loop
         slidesPerView={1}
         breakpoints={{
-          640: { slidesPerView: 2 },
-          1024: { slidesPerView: 3 },
+          640: { slidesPerView: 2, spaceBetween: 30 },
+          1024: { slidesPerView: 3, spaceBetween: 40 },
         }}
         className="mt-12"
       >
@@ -43,18 +43,19 @@ const ArtWorks = () => {
             className="flex flex-col items-center justify-center"
           >
             {/* Artwork Card */}
-            <div className="relative w-full max-w-md h-[28rem] md:h-[32rem] bg-black/40 overflow-hidden rounded-2xl shadow-[0_0_25px_rgba(168,85,247,0.4)] group flex items-center justify-center">
+            <div className="relative w-full max-w-md aspect-[3/4] bg-black/30 overflow-hidden rounded-2xl shadow-[0_0_25px_rgba(168,85,247,0.4)] group">
               <img
                 src={art.img}
                 alt={art.Name}
-                className="max-h-full max-w-full object-contain transition-transform duration-500 ease-in-out group-hover:scale-105"
+                className="w-full h-full object-contain p-2 transition-transform duration-500 ease-in-out group-hover:scale-105"
               />
-              {/* Name Overlay */}
-              <div className="absolute bottom-0 left-0 right-0 bg-black/50 py-2 text-center opacity-0 group-hover:opacity-100 transition-all duration-500">
-                <p className="text-lg font-semibold text-purple-300">
-                  {art.Name}
-                </p>
+              {/* Name Tag */}
+              <div className="absolute bottom-0 left-0 right-0 bg-black/40 py-2 text-center text-purple-300 font-medium text-lg transition-all duration-500 group-hover:bg-black/70">
+                {art.Name}
               </div>
+
+              {/* Hover Glow */}
+              <div className="absolute inset-0 border-2 border-transparent group-hover:border-purple-500/60 rounded-2xl transition-all duration-500"></div>
             </div>
           </SwiperSlide>
         ))}
