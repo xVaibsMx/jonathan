@@ -2,10 +2,11 @@ import React from 'react'
 import januImg from '../Assets/Jonathan.jpeg'
 import kakashi from '../Assets/Kakashi.jpg'
 
+
 const Hero = () => {
   return (
     <section className="mt-12 text-gray-100">
-      {/* 🔥 Top Main Hero */}
+      {/* Top Main Hero */}
       <div className="flex flex-col md:flex-row justify-center items-center gap-16 px-6">
         {/* Left Text Section */}
         <div className="text-center md:text-left">
