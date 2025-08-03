@@ -6,14 +6,14 @@ const NavBar = () => {
   const menuItems = [
     { label: '🎨 ArtWorks', target: 'artworks' },
     { label: '✨ Meet Jonathan', target: 'about' },
-    { label: "📩 Let's Collab", target: 'contact' },
+    { label: '📬 Get in Touch', target: 'contact' },
   ]
 
   const scrollToSection = (id) => {
     const section = document.getElementById(id)
     if (!section) return
 
-    const duration = 4000 // duration in milliseconds (1.5 seconds)
+    const duration = 1500 // duration in milliseconds (1.5 seconds)
     const start = window.pageYOffset
     const targetPosition =
       section.getBoundingClientRect().top + window.pageYOffset
