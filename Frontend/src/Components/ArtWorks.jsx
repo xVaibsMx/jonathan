@@ -10,17 +10,21 @@ import artWorks from '../Data/artworks'
 
 const ArtWorks = () => {
   return (
-    <section className="mt-32 max-w-7xl mx-auto px-6 text-gray-100">
+    <section
+      aria-label="Jonathan's Artworks"
+      className="mt-32 max-w-7xl mx-auto px-6 text-gray-100"
+    >
       {/* Heading */}
-      <div className="text-center">
-        <h1 className="text-4xl md:text-6xl font-bold text-purple-600 font-mono drop-shadow-[0_0_15px_rgba(168,85,247,0.5)]">
+      <header className="text-center mb-16">
+        <h2 className="text-5xl md:text-6xl font-semibold text-purple-700 font-mono tracking-wide">
           ArtWorks
-        </h1>
-        <h2 className="text-lg md:text-xl font-light mt-3 text-blue-300">
-          Some of my{' '}
-          <span className="text-pink-400 font-semibold">best works</span>.
         </h2>
-      </div>
+        <p className="text-xl md:text-2xl font-light mt-4 text-blue-400 max-w-xl mx-auto leading-relaxed">
+          A curated collection of my{' '}
+          <span className="text-pink-400 font-semibold">finest artworks</span>,
+          showcasing creativity and technique.
+        </p>
+      </header>
 
       {/* Swiper Slider */}
       <Swiper
@@ -28,35 +32,35 @@ const ArtWorks = () => {
         spaceBetween={40}
         pagination={{ clickable: true }}
         navigation
-        autoplay={{ delay: 3000, disableOnInteraction: false }}
+        autoplay={{ delay: 4000, disableOnInteraction: false }}
         loop
         slidesPerView={1}
         breakpoints={{
           640: { slidesPerView: 2, spaceBetween: 30 },
           1024: { slidesPerView: 3, spaceBetween: 40 },
         }}
-        className="mt-12"
+        className="mt-10"
+        aria-live="polite"
       >
         {artWorks.map((art, index) => (
           <SwiperSlide
-            key={index}
+            key={art.id || index}
             className="flex flex-col items-center justify-center"
           >
-            {/* Artwork Card */}
-            <div className="relative w-full max-w-md aspect-[3/4] bg-black/30 overflow-hidden rounded-2xl shadow-[0_0_25px_rgba(168,85,247,0.4)] group">
+            <article className="relative w-full max-w-sm aspect-[3/4] bg-black/25 rounded-3xl shadow-lg shadow-purple-700/40 overflow-hidden group transition-transform duration-500 ease-in-out hover:scale-[1.03]">
               <img
                 src={art.img}
                 alt={art.Name}
-                className="w-full h-full object-contain p-2 transition-transform duration-500 ease-in-out group-hover:scale-105"
+                loading="lazy"
+                className="w-full h-full object-cover transition-shadow duration-500 ease-in-out group-hover:shadow-[0_0_30px_10px_rgba(168,85,247,0.5)] rounded-3xl"
               />
-              {/* Name Tag */}
-              <div className="absolute bottom-0 left-0 right-0 bg-black/40 py-2 text-center text-purple-300 font-medium text-lg transition-all duration-500 group-hover:bg-black/70">
+
+              <div className="absolute bottom-0 left-0 right-0 bg-black/40 backdrop-blur-sm py-3 text-center text-purple-300 font-semibold text-lg tracking-wide transition-colors duration-500 group-hover:bg-black/60">
                 {art.Name}
               </div>
 
-              {/* Hover Glow */}
-              <div className="absolute inset-0 border-2 border-transparent group-hover:border-purple-500/60 rounded-2xl transition-all duration-500"></div>
-            </div>
+              <div className="pointer-events-none absolute inset-0 rounded-3xl border-4 border-purple-500/50 opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-in-out"></div>
+            </article>
           </SwiperSlide>
         ))}
       </Swiper>

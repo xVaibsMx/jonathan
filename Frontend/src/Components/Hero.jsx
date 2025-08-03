@@ -2,7 +2,6 @@ import React from 'react'
 import januImg from '../Assets/Jonathan.jpeg'
 import kakashi from '../Assets/Kakashi.jpg'
 
-
 const Hero = () => {
   return (
     <section className="mt-12 text-gray-100">
@@ -10,7 +9,7 @@ const Hero = () => {
       <div className="flex flex-col md:flex-row justify-center items-center gap-16 px-6">
         {/* Left Text Section */}
         <div className="text-center md:text-left">
-          <h1 className="text-4xl md:text-6xl font-bold text-purple-600  font-mono">
+          <h1 className="text-4xl md:text-6xl font-bold text-purple-600 font-mono">
             Jonathan <br />
             Sam Wilbur
           </h1>
@@ -25,23 +24,28 @@ const Hero = () => {
             . ⚡
           </p>
 
-          {/* Instagram Button */}
+          {/* Instagram Button (Enhanced) */}
           <a
             href="https://www.instagram.com/official_anime_art_sales/"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block mt-8 px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg text-white font-semibold transition-all duration-300 shadow-md shadow-purple-900/50"
+            className="inline-block mt-8 px-2 py-1 text-purple-400 font-medium text-lg tracking-wide 
+             relative transition-colors duration-500 ease-out hover:text-purple-300
+             after:block after:content-[''] after:h-[2px] after:bg-purple-500 
+             after:scale-x-0 after:transition-transform after:duration-500 
+             after:ease-out after:origin-left hover:after:scale-x-100"
           >
             Order Now
           </a>
         </div>
 
-        {/* Right Main Image */}
+        {/* Right Main Image (Enhanced) */}
         <div className="w-72 h-72 md:w-96 md:h-96 overflow-hidden rounded-3xl shadow-[0_0_25px_rgba(168,85,247,0.4)]">
           <img
             src={januImg}
             alt="Artwork"
-            className="w-full h-full object-cover transform transition-all duration-500 ease-in-out hover:scale-110 hover:rotate-1"
+            className="w-full h-full object-cover transition-all duration-700 ease-in-out 
+              transform hover:scale-110 hover:rotate-[1deg] hover:shadow-[0_0_30px_rgba(216,70,239,0.4)]"
           />
         </div>
       </div>
