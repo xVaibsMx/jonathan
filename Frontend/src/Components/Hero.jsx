@@ -4,71 +4,80 @@ import kakashi from '../Assets/Kakashi.jpg'
 
 const Hero = () => {
   return (
-    <section id="hero" className="mt-12 text-gray-100 px-4 sm:px-6">
-      {/* Image first on mobile */}
-      <div className="flex flex-col-reverse md:flex-row justify-center items-center gap-12 md:gap-16">
-        {/* Text Section */}
+    <section
+      id="hero"
+      className="mt-12 text-gray-100 px-4 sm:px-6 md:px-16 lg:px-24"
+    >
+      {/* Top part with image + name */}
+      <div className="flex flex-col md:flex-row justify-center items-center gap-10 md:gap-16">
         <div className="text-center md:text-left">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-purple-500 font-mono leading-tight drop-shadow-sm">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-purple-600 font-mono leading-tight">
             Jonathan <br />
             Sam Wilbur
           </h1>
-          <h2 className="text-lg sm:text-xl mt-2 text-blue-300 font-semibold tracking-widest uppercase">
+          <h2 className="text-xl sm:text-2xl md:text-3xl mt-3 text-blue-300 font-semibold tracking-wide">
             Freelance <span className="text-pink-400">Anime Artist</span>
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-gray-300 max-w-sm leading-relaxed mx-auto md:mx-0">
-            Drawing with the precision of a{' '}
-            <span className="text-red-400 font-bold drop-shadow-md">
+          <p className="mt-4 text-base sm:text-lg md:text-xl text-gray-300 max-w-md md:max-w-lg leading-relaxed mx-auto md:mx-0">
+            Draws with the precision of a{' '}
+            <span className="text-red-400 font-bold drop-shadow-sm">
               Sharingan
             </span>
-            . ⚡ Your favorite characters, redrawn with soul.
+            . ⚡
           </p>
           <a
             href="https://www.instagram.com/official_anime_art_sales/"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block mt-6 px-6 py-2 text-purple-400 font-medium border border-purple-500 rounded-full hover:text-white hover:bg-purple-600 transition-all duration-300 shadow-lg"
+            className="inline-block mt-6 sm:mt-8 px-5 py-3 text-purple-400 font-medium text-base sm:text-lg md:text-xl border border-purple-500 rounded-full hover:text-white hover:bg-purple-500 transition-all duration-300"
           >
             Order Now
           </a>
         </div>
 
-        {/* Profile Image */}
-        <div className="w-56 h-56 sm:w-64 sm:h-64 md:w-80 md:h-80 overflow-hidden rounded-3xl shadow-[0_0_25px_rgba(168,85,247,0.4)]">
+        <div className="w-64 h-64 sm:w-72 sm:h-72 md:w-96 md:h-96 overflow-hidden rounded-3xl shadow-[0_0_25px_rgba(168,85,247,0.4)]">
           <img
             src={januImg}
-            alt="Jonathan"
-            className="w-full h-full object-cover transition-all duration-700 ease-in-out transform hover:scale-105 hover:rotate-[1.5deg]"
+            alt="Artwork"
+            className="w-full h-full object-cover transition-all duration-700 ease-in-out transform hover:scale-110 hover:rotate-[1deg] hover:shadow-[0_0_30px_rgba(216,70,239,0.4)]"
           />
         </div>
       </div>
 
-      {/* Kakashi Visual + Intro */}
-      <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-20 mt-16 text-center md:text-left">
-        <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 overflow-hidden rounded-xl shadow-[0_0_15px_rgba(168,85,247,0.3)]">
+      {/* Bottom section with Kakashi image and text */}
+      <div className="flex flex-col md:flex-row justify-center items-center gap-10 md:gap-20 mt-16 text-center md:text-left">
+        <div className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 overflow-hidden rounded-2xl shadow-[0_0_15px_rgba(168,85,247,0.4)]">
           <img
             src={kakashi}
             alt="Kakashi"
-            className="w-full h-full object-cover transform transition-all duration-500 hover:scale-105"
+            className="w-full h-full object-cover transform transition-all duration-500 ease-in-out hover:scale-110"
           />
         </div>
 
-        <div className="max-w-xl text-gray-300 px-2 sm:px-0">
-          <p className="text-base sm:text-lg font-light leading-loose">
-            I'm <span className="text-purple-400 font-bold">Jonathan</span>, a{' '}
+        <div className="max-w-lg text-gray-300 leading-relaxed px-4 sm:px-0">
+          <p className="text-base sm:text-xl md:text-2xl lg:text-3xl font-light">
+            Hey, I’m <span className="text-purple-400 font-bold">Jonathan</span>
+            , the{' '}
             <span className="text-blue-400 font-semibold">
               Copy Artist of Pixels
             </span>
-            . I recreate anime styles, perfect techniques, and craft{' '}
+            . <br />I mimic{' '}
+            <span className="text-pink-400 font-semibold">styles</span>, master{' '}
+            <span className="text-green-400 font-semibold">techniques</span>,
+            and craft{' '}
             <span className="text-yellow-400 font-semibold">
               original artworks
             </span>{' '}
             that speak louder than words. <br />
-            Inspired by{' '}
+            Like{' '}
             <span className="text-red-400 font-bold">
               Kakashi, the Copy Ninja
             </span>
-            , I adapt, evolve, and perfect every stroke.
+            , I adapt, learn fast, and{' '}
+            <span className="text-purple-300 font-semibold">
+              perfect every stroke
+            </span>
+            .
           </p>
         </div>
       </div>
