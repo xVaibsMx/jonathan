@@ -31,7 +31,7 @@ const ArtWorks = () => {
         spaceBetween={40}
         pagination={{ clickable: true }}
         navigation
-        autoplay={{ delay: 4000, disableOnInteraction: false }}
+        autoplay={{ delay: 2000, disableOnInteraction: false }}
         loop
         slidesPerView={1}
         breakpoints={{
