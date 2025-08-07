@@ -12,16 +12,16 @@ const Hero = () => {
       <div className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16">
         {/* Text Section */}
         <div className="text-center md:text-left">
-          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-purple-600 font-mono leading-snug">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-purple-600 font-mono leading-snug">
             Jonathan <br />
             Sam Wilbur
           </h1>
 
-          <h2 className="text-lg sm:text-xl md:text-2xl mt-2 text-blue-300 font-semibold tracking-wide">
+          <h2 className="text-xl sm:text-2xl md:text-3xl mt-2 text-blue-300 font-semibold tracking-wide">
             Freelance <span className="text-pink-400">Anime Artist</span>
           </h2>
 
-          <p className="mt-4 text-sm sm:text-base md:text-lg text-gray-300 max-w-xs sm:max-w-md md:max-w-lg leading-relaxed mx-auto md:mx-0">
+          <p className="mt-4 text-base sm:text-lg md:text-xl text-gray-300 max-w-xs sm:max-w-md md:max-w-lg leading-relaxed mx-auto md:mx-0">
             Draws with the precision of a{' '}
             <span className="text-red-400 font-bold">Sharingan</span>. ⚡
           </p>
@@ -30,14 +30,14 @@ const Hero = () => {
             href="https://www.instagram.com/official_anime_art_sales/"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block mt-6 sm:mt-8 px-6 py-2 text-purple-400 font-semibold text-base border border-purple-500 rounded-full hover:bg-purple-500 hover:text-white transition-all duration-300"
+            className="inline-block mt-6 sm:mt-8 px-6 py-2 text-purple-400 font-semibold text-base sm:text-lg border border-purple-500 rounded-full hover:bg-purple-500 hover:text-white transition-all duration-300"
           >
             🎨 Order Now
           </a>
         </div>
 
         {/* Jonathan Image */}
-        <div className="w-52 h-52 sm:w-64 sm:h-64 md:w-80 md:h-80 overflow-hidden rounded-3xl shadow-[0_0_25px_rgba(168,85,247,0.4)]">
+        <div className="w-56 h-56 sm:w-64 sm:h-64 md:w-80 md:h-80 overflow-hidden rounded-3xl shadow-[0_0_25px_rgba(168,85,247,0.4)]">
           <img
             src={januImg}
             alt="Jonathan's Art"
@@ -49,7 +49,7 @@ const Hero = () => {
       {/* Kakashi Section */}
       <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16 mt-16 text-center md:text-left">
         {/* Kakashi Image */}
-        <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 overflow-hidden rounded-2xl shadow-[0_0_15px_rgba(168,85,247,0.4)]">
+        <div className="w-24 h-24 sm:w-28 sm:h-28 md:w-28 md:h-28 overflow-hidden rounded-2xl shadow-[0_0_15px_rgba(168,85,247,0.4)]">
           <img
             src={kakashi}
             alt="Kakashi"
