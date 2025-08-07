@@ -4,6 +4,7 @@ const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   const menuItems = [
+    { label: '/', target: 'hero' },
     { label: '🎨 ArtWorks', target: 'artworks' },
     { label: '✨ Meet Jonathan', target: 'about' },
     { label: '📬 Get in Touch', target: 'contact' },
@@ -43,13 +44,9 @@ const NavBar = () => {
     setIsOpen(false)
   }
 
-  // Prevent background scroll when menu is open (mobile)
+  // Prevent background scroll when mobile menu is open
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden'
-    } else {
-      document.body.style.overflow = 'auto'
-    }
+    document.body.style.overflow = isOpen ? 'hidden' : 'auto'
   }, [isOpen])
 
   return (
@@ -62,6 +59,7 @@ const NavBar = () => {
       )}
 
       <nav className="fixed top-0 left-1/2 z-50 flex justify-center pt-6 backdrop-blur-sm -translate-x-1/2 w-full max-w-7xl px-4">
+        {/* Mobile Toggle Button */}
         <div className="md:hidden absolute top-6 right-6 z-50">
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -72,6 +70,7 @@ const NavBar = () => {
           </button>
         </div>
 
+        {/* Navigation Links */}
         <ul
           className={`${
             isOpen
@@ -86,7 +85,7 @@ const NavBar = () => {
             <li
               key={idx}
               onClick={() => scrollToSection(item.target)}
-              className="cursor-pointer rounded-full px-4 py-2 transition-colors duration-500 ease-in-out hover:bg-purple-500 hover:text-white"
+              className="cursor-pointer rounded-full px-4 py-2 transition-colors duration-300 ease-in-out hover:bg-purple-500 hover:text-white"
             >
               {item.label}
             </li>
