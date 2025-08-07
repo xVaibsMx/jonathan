@@ -58,7 +58,7 @@ const Hero = () => {
         </div>
 
         {/* Text */}
-        <div className="max-w-lg px-2 sm:px-0 text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed">
+        <div className="max-w-lg px-2 sm:px-0 text-lg sm:text-base md:text-lg text-gray-300 leading-relaxed">
           <p>
             Hey, I’m <span className="text-purple-400 font-bold">Jonathan</span>
             , the{' '}
