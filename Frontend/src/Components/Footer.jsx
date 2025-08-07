@@ -2,14 +2,14 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-gray-300 pt-10 border-t border-purple-800/40">
+    <footer className="bg-gray-900 text-gray-300 border-t border-purple-800/40">
       {/* Main Info Section */}
-      <div className="max-w-7xl mx-auto px-6 pb-8 flex flex-col md:flex-row justify-between items-center gap-6">
-        <p className="text-sm md:text-base">
+      <div className="max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p className="text-sm text-center md:text-left">
           © {new Date().getFullYear()} Jonathan Sam Wilbur. All rights reserved.
         </p>
 
-        <div className="flex flex-wrap justify-center gap-4 text-sm">
+        <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-2 sm:gap-4 text-sm text-center md:text-right">
           <a
             href="https://www.instagram.com/_copy___ninja_/"
             target="_blank"
@@ -38,7 +38,7 @@ const Footer = () => {
       {/* Creator Section */}
       <div className="bg-gray-950 border-t border-purple-800/30 py-6 px-6">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-gray-400">
+          <p className="text-sm text-center text-gray-400">
             Built & Maintained by{' '}
             <a
               href="https://x.com/xVaibsMx"
@@ -50,7 +50,7 @@ const Footer = () => {
             </a>
           </p>
 
-          <div className="flex space-x-5 text-sm text-gray-400">
+          <div className="flex flex-wrap justify-center md:justify-end gap-3 text-sm text-gray-400">
             <a
               href="https://x.com/xVaibsMx"
               target="_blank"

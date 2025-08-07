@@ -7,7 +7,7 @@ import Footer from '../Components/Footer'
 
 const Landing = () => {
   return (
-    <main>
+    <main className="pt-16">
       <Hero />
       <ArtWorks />
       <About />

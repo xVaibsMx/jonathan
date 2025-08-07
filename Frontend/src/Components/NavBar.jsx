@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -13,7 +13,7 @@ const NavBar = () => {
     const section = document.getElementById(id)
     if (!section) return
 
-    const duration = 1500 // duration in milliseconds (1.5 seconds)
+    const duration = 1200
     const start = window.pageYOffset
     const targetPosition =
       section.getBoundingClientRect().top + window.pageYOffset
@@ -35,42 +35,65 @@ const NavBar = () => {
       if (timeElapsed < duration) {
         requestAnimationFrame(animation)
       } else {
-        window.scrollTo(0, targetPosition) // Fix final position
+        window.scrollTo(0, targetPosition)
       }
     }
 
     requestAnimationFrame(animation)
-    setIsOpen(false) // Close menu on mobile
+    setIsOpen(false)
   }
 
-  return (
-    <nav className="w-full flex justify-center pt-10 z-50 relative">
-      <div className="md:hidden absolute top-8 right-6 z-50">
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="text-gray-100 bg-purple-700 px-3 py-2 rounded-md shadow-md shadow-purple-800 focus:outline-none"
-          aria-label="Toggle menu"
-        >
-          {isOpen ? '✖' : '☰'}
-        </button>
-      </div>
+  // Prevent background scroll when menu is open (mobile)
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'auto'
+    }
+  }, [isOpen])
 
-      <ul
-        className={`flex flex-col md:flex-row items-center gap-6 md:gap-10 text-lg font-mono bg-gray-900/80 text-gray-100 rounded-3xl py-4 px-8 shadow-lg shadow-purple-900/40 backdrop-blur-md border border-purple-800/40 transition-all duration-500 ease-in-out ${
-          isOpen ? 'flex' : 'hidden'
-        } md:flex`}
-      >
-        {menuItems.map((item, idx) => (
-          <li
-            key={idx}
-            onClick={() => scrollToSection(item.target)}
-            className="cursor-pointer rounded-full px-4 py-2 transition-colors duration-700 ease-out hover:bg-purple-500 hover:text-white"
+  return (
+    <>
+      {isOpen && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-40 backdrop-blur-sm z-40"
+          onClick={() => setIsOpen(false)}
+        />
+      )}
+
+      <nav className="fixed top-0 left-1/2 z-50 flex justify-center pt-6 backdrop-blur-sm -translate-x-1/2 w-full max-w-7xl px-4">
+        <div className="md:hidden absolute top-6 right-6 z-50">
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="text-gray-100 bg-purple-700 px-3 py-2 rounded-md shadow-md shadow-purple-800 focus:outline-none"
+            aria-label="Toggle menu"
           >
-            {item.label}
-          </li>
-        ))}
-      </ul>
-    </nav>
+            {isOpen ? '✖' : '☰'}
+          </button>
+        </div>
+
+        <ul
+          className={`${
+            isOpen
+              ? 'absolute top-16 left-1/2 -translate-x-1/2 mx-auto w-[90%]'
+              : ''
+          } md:flex flex-col md:flex-row items-center gap-6 md:gap-10 text-base font-mono bg-gray-900/90 text-gray-100 rounded-3xl px-6 py-5 shadow-xl shadow-purple-900/40 backdrop-blur-md border border-purple-800/40 transition-all duration-500 ease-in-out ${
+            isOpen ? 'flex' : 'hidden md:flex'
+          }`}
+          style={{ minWidth: '250px' }}
+        >
+          {menuItems.map((item, idx) => (
+            <li
+              key={idx}
+              onClick={() => scrollToSection(item.target)}
+              className="cursor-pointer rounded-full px-4 py-2 transition-colors duration-500 ease-in-out hover:bg-purple-500 hover:text-white"
+            >
+              {item.label}
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </>
   )
 }
 

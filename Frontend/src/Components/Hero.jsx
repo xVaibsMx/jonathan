@@ -6,47 +6,50 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="mt-12 text-gray-100 px-4 sm:px-6 md:px-16 lg:px-24"
+      className="mt-20 px-4 sm:px-6 md:px-16 lg:px-24 text-gray-100"
     >
-      {/* Top part with image + name */}
-      <div className="flex flex-col md:flex-row justify-center items-center gap-10 md:gap-16">
+      {/* Top part: Name + Art Image */}
+      <div className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16">
+        {/* Text Section */}
         <div className="text-center md:text-left">
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-purple-600 font-mono leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-purple-600 font-mono leading-snug">
             Jonathan <br />
             Sam Wilbur
           </h1>
-          <h2 className="text-xl sm:text-2xl md:text-3xl mt-3 text-blue-300 font-semibold tracking-wide">
+
+          <h2 className="text-lg sm:text-xl md:text-2xl mt-2 text-blue-300 font-semibold tracking-wide">
             Freelance <span className="text-pink-400">Anime Artist</span>
           </h2>
-          <p className="mt-4 text-base sm:text-lg md:text-xl text-gray-300 max-w-md md:max-w-lg leading-relaxed mx-auto md:mx-0">
+
+          <p className="mt-4 text-sm sm:text-base md:text-lg text-gray-300 max-w-xs sm:max-w-md md:max-w-lg leading-relaxed mx-auto md:mx-0">
             Draws with the precision of a{' '}
-            <span className="text-red-400 font-bold drop-shadow-sm">
-              Sharingan
-            </span>
-            . ⚡
+            <span className="text-red-400 font-bold">Sharingan</span>. ⚡
           </p>
+
           <a
             href="https://www.instagram.com/official_anime_art_sales/"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block mt-6 sm:mt-8 px-5 py-3 text-purple-400 font-medium text-base sm:text-lg md:text-xl border border-purple-500 rounded-full hover:text-white hover:bg-purple-500 transition-all duration-300"
+            className="inline-block mt-6 sm:mt-8 px-6 py-2 text-purple-400 font-semibold text-base border border-purple-500 rounded-full hover:bg-purple-500 hover:text-white transition-all duration-300"
           >
-            Order Now
+            🎨 Order Now
           </a>
         </div>
 
-        <div className="w-64 h-64 sm:w-72 sm:h-72 md:w-96 md:h-96 overflow-hidden rounded-3xl shadow-[0_0_25px_rgba(168,85,247,0.4)]">
+        {/* Jonathan Image */}
+        <div className="w-52 h-52 sm:w-64 sm:h-64 md:w-80 md:h-80 overflow-hidden rounded-3xl shadow-[0_0_25px_rgba(168,85,247,0.4)]">
           <img
             src={januImg}
-            alt="Artwork"
-            className="w-full h-full object-cover transition-all duration-700 ease-in-out transform hover:scale-110 hover:rotate-[1deg] hover:shadow-[0_0_30px_rgba(216,70,239,0.4)]"
+            alt="Jonathan's Art"
+            className="w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-110 hover:rotate-[1deg] hover:shadow-[0_0_30px_rgba(216,70,239,0.4)]"
           />
         </div>
       </div>
 
-      {/* Bottom section with Kakashi image and text */}
-      <div className="flex flex-col md:flex-row justify-center items-center gap-10 md:gap-20 mt-16 text-center md:text-left">
-        <div className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 overflow-hidden rounded-2xl shadow-[0_0_15px_rgba(168,85,247,0.4)]">
+      {/* Kakashi Section */}
+      <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16 mt-16 text-center md:text-left">
+        {/* Kakashi Image */}
+        <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 overflow-hidden rounded-2xl shadow-[0_0_15px_rgba(168,85,247,0.4)]">
           <img
             src={kakashi}
             alt="Kakashi"
@@ -54,21 +57,23 @@ const Hero = () => {
           />
         </div>
 
-        <div className="max-w-lg text-gray-300 leading-relaxed px-4 sm:px-0">
-          <p className="text-base sm:text-xl md:text-2xl lg:text-3xl font-light">
+        {/* Text */}
+        <div className="max-w-lg px-2 sm:px-0 text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed">
+          <p>
             Hey, I’m <span className="text-purple-400 font-bold">Jonathan</span>
             , the{' '}
             <span className="text-blue-400 font-semibold">
               Copy Artist of Pixels
             </span>
-            . <br />I mimic{' '}
+            .<br />I mimic{' '}
             <span className="text-pink-400 font-semibold">styles</span>, master{' '}
             <span className="text-green-400 font-semibold">techniques</span>,
             and craft{' '}
             <span className="text-yellow-400 font-semibold">
               original artworks
             </span>{' '}
-            that speak louder than words. <br />
+            that speak louder than words.
+            <br />
             Like{' '}
             <span className="text-red-400 font-bold">
               Kakashi, the Copy Ninja
