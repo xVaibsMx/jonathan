@@ -1,5 +1,5 @@
 import React from 'react'
-import januImg from '../Assets/Jonathan.jpg'
+import januImg from '../Assets/copyNinja.jpeg'
 import kakashi from '../Assets/Kakashi.jpg'
 
 const Hero = () => {
