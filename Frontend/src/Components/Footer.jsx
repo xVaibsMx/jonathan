@@ -27,6 +27,14 @@ const Footer = () => {
             Art Sales
           </a>
           <a
+            href="https://wa.me/917708418374"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-green-400 transition"
+          >
+            WhatsApp
+          </a>
+          <a
             href="mailto:jonathan@example.com"
             className="hover:text-gray-100 transition"
           >

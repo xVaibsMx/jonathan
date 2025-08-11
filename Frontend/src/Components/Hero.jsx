@@ -12,9 +12,11 @@ const Hero = () => {
       <div className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16">
         {/* Text Section */}
         <div className="text-center md:text-left">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-purple-600 font-mono leading-snug">
-            Jonathan <br />
-            Sam Wilbur
+          <h1
+            style={{ fontFamily: '"Black Ops One", sans-serif' }}
+            className="tracking-tight text-4xl sm:text-5xl md:text-6xl font-bold text-purple-600 leading-snug"
+          >
+            Jonathan <br /> Sam Wilbur
           </h1>
 
           <h2 className="text-xl sm:text-2xl md:text-3xl mt-2 text-blue-300 font-semibold tracking-wide">

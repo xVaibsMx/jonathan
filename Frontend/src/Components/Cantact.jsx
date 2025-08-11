@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { FaInstagram } from 'react-icons/fa'
+import { FaInstagram, FaWhatsapp } from 'react-icons/fa'
 
 const Contact = () => {
   const [isVisible, setIsVisible] = useState(false)
@@ -57,6 +57,16 @@ const Contact = () => {
         >
           <FaInstagram className="text-lg" />
           <span className="font-medium">Anime Art Sales</span>
+        </a>
+
+        <a
+          href="https://wa.me/917708418374"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center justify-center gap-2 px-4 py-3 sm:px-6 sm:py-4 border border-green-500 text-green-400 hover:border-green-300 hover:text-white rounded-xl transition-all duration-200 shadow-md hover:shadow-green-700/40 w-full sm:w-auto text-sm sm:text-base"
+        >
+          <FaWhatsapp className="text-lg" />
+          <span className="font-medium">WhatsApp</span>
         </a>
       </div>
     </section>
